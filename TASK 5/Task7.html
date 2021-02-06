@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window</title>
+    <script>
+        let fullWindow; 
+        function fullScreen() 
+        {  
+             fullWindow= window.open("https://www.google.com");
+    
+        }
+        function exitScreen()
+        { 
+            fullWindow.close();
+        }
+        function launchFullscreen(element)
+        {
+            if(element.requestFullscreen)
+            element.requestFullscreen();
+            else if(element.mozRequestFullscreen)
+            element.mozRequestFullscreen();
+            else if(element.webkitRequestFullscreen)
+            element.webkitRequestFullscreen();
+            else if(element.msRequestFullscreen)
+            element.msRequestFullscreen();
+        }
+        function exitFullscreen(){
+            if(document.exitFullscreen)
+            document.exitFullscreen();
+            else if(document.mozCancelFullScreen)
+            document.mozCancelFullScreen();
+            else if(document.webkitCancelFullScreen)
+            document.webkitCancelFullScreen();
+            else if(document.msCancelFullScreen)
+            document.msCancelFullScreen();
+        }
+        </script>
+</head>
+<body>
+    <button  onclick="fullScreen()">Open Screen</button>
+    <br>
+    <button  onclick="exitScreen()">Close Screen</button>
+    <br>
+    <button onclick="launchFullscreen(document.documentElement);">Launch Fullscreen</button>
+    <br>
+    <button onclick="exitFullscreen();">Exit Full Screen</button>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DecimalToBinary</title>
+    <script>
+    function DecToBin() 
+    {
+        var num=document.getElementById("Userinput").value;
+        if(num>0)
+            document.getElementById("Output").innerHTML =parseInt(num).toString(2);
+        else
+            document.getElementById("Output").innerHTML ="0";
+    }
+
+    </script>
+</head>
+<body>
+    <label for="Userinput">Decimal To Binary Conversion</label>
+    <br>
+    <input type="text" id="Userinput"/>
+    <br>
+    <input type="submit" onclick="DecToBin()"/>
+    <p id="Output"></p>
+</body>
+</html>

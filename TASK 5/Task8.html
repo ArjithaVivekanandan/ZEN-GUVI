@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keypress</title>
+    <script> 
+    
+    document.addEventListener("keydown",(event)=>{ 
+        
+        if(event.keyCode==32)
+        {
+            let me= window.open(" ","_self");
+            me.alert("Thank You..!!");
+            me.close();
+        }
+        else
+        alert("Invalid Key Pressed");
+        
+        })
+
+
+    </script>
+</head>
+<body>
+   
+</body>
+</html>
