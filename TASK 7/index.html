@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Acme&family=PT+Serif:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
     <style>  
     body{
         
@@ -17,7 +19,8 @@
     #box1{
         width:100%;
         height:200px;
-        background-color:grey;
+        position: relative;
+        background-color:rgb(83, 78, 78);
     }
     #box2{
         width:100%;
@@ -27,27 +30,30 @@
     #box3{
         width:100%;
         height:20px;
-        background-color:grey;
+        background-color:rgb(83, 78, 78);
     }
     #box4{
         width:100%;
         height:20px;
-        border-bottom:1px solid grey;
+        border-bottom:1px solid rgb(83, 78, 78);
         text-align:center;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-family: 'Acme', sans-serif;
+
         
     }
     #overlap{ 
+        position: absolute;
         
-        position:absolute;
-        margin-left:420px;
+        left:50%;
+        margin-left:-150px;
         margin-top:-37px;
         width:300px;
         height:70px;
         background-color:orange;
         font-size:50px;
         text-align:center;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        font-family: 'Acme', sans-serif;
+
     }
     .row{
         width:100%;
@@ -58,45 +64,43 @@
     }
     .left_column{
         
-    height:900px;
-    border-right: 1px solid grey;
-    padding-left: 20px;
-        padding-right: 20px;
-        padding-top:20px;
-        padding-bottom: 20px;
-    
-    }
-    
-    .right_column{
-                
-        height:900px;
+        height:100%;
+        border-right: 1px solid grey;
         padding-left: 20px;
         padding-right: 20px;
         padding-top:20px;
         padding-bottom: 20px;
+    }
     
-        
-        
+    .right_column{
+                
+        height:100%;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-top:20px;
+        padding-bottom: 20px;
+                   
     }
     th{
         float:left;
         font-size: 20px;
-        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-        
-        color:grey;
+        font-family: 'Acme', sans-serif;
+        color:rgb(83, 78, 78);
    }
    #Sub{
        
        font-size:15px;
        text-align:center;
+       font-family: 'Acme', sans-serif;
    }
 p,li{
     text-align:justify;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-family: 'Acme', sans-serif;
+
 }
   #main{
       width:100%;
-      font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+      font-family: 'Acme', sans-serif;
       display:grid;
       grid-template-columns: 50% 50%;
 
@@ -106,27 +110,31 @@ p,li{
       height:4px;
       
   }
-  #image{
-
-  
-  border: 2px dashed orange;
-  border-radius:100px;
-  width:100px;height:100px;
-  position:absolute;
-  margin-left:520px;
- margin-top:70px;
-        
-  }
-    
+  #imagediv{
+        position: absolute;
+        bottom:0px;
+        left:50%;
+        margin-left:-78px;
+        width: 156px;
+        height: 150px;
+        border: 4px dotted orange;
+        border-radius:100px;
+                    
+      }
+      #img{
+        width:100%;
+        height:100%;
+          }
+      
     </style>
 </head>
 <body>
     
-    <div id="box1"><img src="user.png" id="image"></div>
-    <div id="overlap">Arjitha</div>
+    <div id="box1"><div id="imagediv"><img id="img" src="user.png"></div></div>
+    <div id="overlap">ARJITHA</div>
     <div id="box2"></div>
     <div id="box3"></div>
-    <div id="box4">Address|Mobile|Email|Website</div>
+    <div id="box4">Address | Mobile | Email | Website </div>
     <br>
     <br>
     <div class="row">
@@ -134,14 +142,14 @@ p,li{
             
             <div id="Profile">
             <table >
-                <tr><th><i class="fa fa-user"></i>Profile</th></tr>
+                <tr><th><i class="fa fa-user"></i>&nbsp;&nbsp;Profile</th></tr>
             </table>
             <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Porro, eius quos! Ipsam provident, vitae reprehenderit maiores debitis molestias eum quasi odit quos, officiis dolor non doloribus inventore minima laborum commodi!</p>
             </div>
 
             <div id="Multiple Skills">
             <table >
-                <tr><th><i class="fa fa-stack-exchange"></i>Skills</th></tr>
+                <tr><th><i class="fa fa-stack-exchange"></i>&nbsp;&nbsp;Skills</th></tr>
             </table>
             <h3 id="Sub">Technical Skills</h3>  
             
@@ -156,17 +164,17 @@ p,li{
                     Deployment<br>
                     </div>
                     <div>
-                        <input type="range" min="1" max="100" value="50" id="myRange"><br>
-                        <input type="range" min="1" max="100" value="50" id="myRange"><br>
-                        <input type="range" min="1" max="100" value="50" id="myRange"><br>
-                        <input type="range" min="1" max="100" value="50" id="myRange"><br>
-                        <input type="range" min="1" max="100" value="50" id="myRange"><br>
-                        <input type="range" min="1" max="100" value="50" id="myRange"><br>
-                        <input type="range" min="1" max="100" value="50" id="myRange"><br>
+                        <input type="range" min="1" max="100" value="50" id="myRange" disabled><br>
+                        <input type="range" min="1" max="100" value="50" id="myRange" disabled><br>
+                        <input type="range" min="1" max="100" value="50" id="myRange" disabled><br>
+                        <input type="range" min="1" max="100" value="50" id="myRange" disabled><br>
+                        <input type="range" min="1" max="100" value="50" id="myRange" disabled><br>
+                        <input type="range" min="1" max="100" value="50" id="myRange" disabled><br>
+                        <input type="range" min="1" max="100" value="50" id="myRange" disabled><br>
                     </div> 
 
                 </div>
-              
+              <br>
             <h3 id="Sub">Additional Skills</h3>
             <div id="main">
                 <div>
@@ -177,67 +185,62 @@ p,li{
                     Fund Raising<br>
                 </div>
                 <div>
-                    <input type="range" min="1" max="100" value="50" id="myRange"><br>
-                    <input type="range" min="1" max="100" value="50" id="myRange"><br>
-                    <input type="range" min="1" max="100" value="50" id="myRange"><br>
-                    <input type="range" min="1" max="100" value="50" id="myRange"><br>
-                    <input type="range" min="1" max="100" value="50" id="myRange"><br>
+                    <input type="range" min="1" max="100" value="50" id="myRange" disabled><br>
+                    <input type="range" min="1" max="100" value="50" id="myRange" disabled><br>
+                    <input type="range" min="1" max="100" value="50" id="myRange" disabled><br>
+                    <input type="range" min="1" max="100" value="50" id="myRange" disabled><br>
+                    <input type="range" min="1" max="100" value="50" id="myRange" disabled><br>
                     
                 </div> 
                
             </div>
             </div>                   
-            <br>
-             <div id="Work Experience">
+            <br><br>
+                <div id="Work Experience">
                 <table >
-                    <tr><th><i class="fa fa-briefcase">Work Experience</th></tr>
+                    <tr><th><i class="fa fa-briefcase"></i>&nbsp;&nbsp;Work Experience</th></tr>
                 </table>   
-                <p style="float:left">Event Manager</p>
-                <p style="float:right">03/2014-02/2017<p>
-                <br>
-                <p>Name of The Company</p>
-                <ul>
+                <p style="float:left"><strong>Event Manager</strong><br>Name of The Company</p>
+                <p style="float:right">03/2017-02/2020<p>
+                <ul style="float:left">
                 <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, similique culpa debitis dolore eaque at, ex molestiae, odit illum corrupti obcaecati beatae doloribus molestias incidunt cumque fugit sunt? Dolores, delectus!</li>
                 <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt natus, iusto tempore reprehenderit quaerat quae blanditiis nobis reiciendis necessitatibus nesciunt soluta obcaecati asperiores nihil illum quam unde at expedita repellat.</li>
                 <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum error, distinctio illum quisquam suscipit consectetur eum voluptate eos blanditiis vel ipsa, quis perspiciatis ad pariatur cum, dolore alias sunt eveniet.</li>
                 </ul>
         
             </div>
-
         </div>
         
         <div class="right_column">
             <div id="Work Experience">
                 <table >
-                    <tr><th><i class="fa fa-briefcase"></i>Work Experience</th></tr>
+                    <tr><th><i class="fa fa-briefcase"></i>&nbsp;&nbsp;Work Experience</th></tr>
                 </table>   
-                <p style="float:left">Event Manager</p>
+                <p style="float:left"><strong>Event Manager</strong><br>Name of The Company</p>
                 <p style="float:right">03/2014-02/2017<p>
-                <br>
-                <p>Name of The Company</p>
-                <ul>
+                <ul style="float:left">
                 <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, similique culpa debitis dolore eaque at, ex molestiae, odit illum corrupti obcaecati beatae doloribus molestias incidunt cumque fugit sunt? Dolores, delectus!</li>
                 <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt natus, iusto tempore reprehenderit quaerat quae blanditiis nobis reiciendis necessitatibus nesciunt soluta obcaecati asperiores nihil illum quam unde at expedita repellat.</li>
                 <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum error, distinctio illum quisquam suscipit consectetur eum voluptate eos blanditiis vel ipsa, quis perspiciatis ad pariatur cum, dolore alias sunt eveniet.</li>
                 </ul>
         
             </div>
-            <div id="Education">
+            <div id="Education" style="float:left">
                 <table >
-                    <tr><th><i class="fa fa-graduation-cap"></i></i>
-                    </i>Education</th></tr>
+                    <tr><th><i class="fa fa-graduation-cap"></i>&nbsp;&nbsp;Education</th></tr>
                 </table>   
-                <p style="float:left">Bachelor of Specialisation</p>
-                <p style="float:right">1/01/2010-1/01/2014<p>
-                <br>
-                <p>Name of The Institute</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Id animi blanditiis eos maiores quibusdam quis! Voluptas accusantium reiciendis hic esse dolor optio, quo iste aspernatur deleniti vitae, distinctio molestiae asperiores?</p>
-                <ul>
+                <p style="float:left"><strong>Bachelor of Specialisation</strong><br>Name of The Institute</p>
+                <p style="float:right">1/01/2010-1/01/2014<p>              
+                <p style="float:left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id animi blanditiis eos maiores quibusdam quis! Voluptas accusantium reiciendis hic esse dolor optio, quo iste aspernatur deleniti vitae, distinctio molestiae asperiores?</p>
+                <ul style="float:left">
                 <li>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae, similique culpa debitis dolore eaque at, ex molestiae, odit illum corrupti obcaecati beatae doloribus molestias incidunt cumque fugit sunt? Dolores, delectus!</li>
                 <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sunt natus, iusto tempore reprehenderit quaerat quae blanditiis nobis reiciendis necessitatibus nesciunt soluta obcaecati asperiores nihil illum quam unde at expedita repellat.</li>
                 <li>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rerum error, distinctio illum quisquam suscipit consectetur eum voluptate eos blanditiis vel ipsa, quis perspiciatis ad pariatur cum, dolore alias sunt eveniet.</li>
                 </ul>
-        
+                <p style="float:left"><strong>Bachelor of Specialisation</strong><br>Name of The Institute</p>
+                <p style="float:right">1/01/2009-1/01/2010<p>              
+                <p style="float:left">Lorem ipsum dolor sit amet consectetur adipisicing elit. Id animi blanditiis eos maiores quibusdam quis! Voluptas accusantium reiciendis hic esse dolor optio, quo iste aspernatur deleniti vitae, distinctio molestiae asperiores?</p>
+                
             </div>
 
         </div>
